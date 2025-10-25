@@ -1,5 +1,10 @@
 # Linux Desktop ClaudeMD Seeder
 
+![Claude Code](https://img.shields.io/badge/Claude%20Code-Project-8A2BE2?style=for-the-badge&logo=anthropic)
+
+[![Claude Code Projects Index](https://img.shields.io/badge/Claude%20Code-Projects%20Index-blue?style=flat-square)](https://github.com/danielrosehill/Claude-Code-Repos-Index)
+[![GitHub Master Index](https://img.shields.io/badge/GitHub-Master%20Index-green?style=flat-square)](https://github.com/danielrosehill/Github-Master-Index)
+
 ![alt text](screenshots/image.png)
 
 A systematic utility for spawning contextual CLAUDE.md files across your Linux desktop filesystem to enhance Claude Code's understanding of your directory structure and workflows.
