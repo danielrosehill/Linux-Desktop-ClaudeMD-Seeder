@@ -1,4 +1,4 @@
-This repository was cloned from Github. It contains a mechanism for seeding CLAUDE.md files into commonly used parts of Linux desktop filesystems. The author, Daniel, created this for his own use - hence, some of the CLAUDE.md files may contain references to Daniel or phrases like "this contains Daniel's Github projects." 
+This repository was cloned from Github. It contains a mechanism for seeding CLAUDE.md files into commonly used parts of Linux desktop filesystems. The original author created this for their own use - hence, some of the CLAUDE.md files may contain references to the original author or personalized phrases. 
 
 Here's how you should help the user here to utilise this resource:
 
