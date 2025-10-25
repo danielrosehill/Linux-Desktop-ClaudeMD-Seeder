@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "last_scan": null,
+    "scan_count": 0,
+    "total_files_found": 0,
+    "non_repo_files_count": 0
+  },
+  "repository_bases": [
+    "$HOME/repos/github",
+    "$HOME/repos/hugging-face",
+    "$HOME/repos/forks",
+    "$HOME/repos/work-repos",
+    "$HOME/repos/cloned",
+    "$HOME/repos/docs",
+    "$HOME/repos/documentation",
+    "$HOME/repos/excerpts",
+    "$HOME/repos/indexing-repos",
+    "$HOME/repos/kaggle",
+    "$HOME/repos/mgmt"
+  ],
+  "discovered_files": []
+}

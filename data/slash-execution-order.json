@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "description": "Execution order for slash commands in the Linux Desktop ClaudeMD Seeder workflow",
+    "purpose": "Defines the systematic process for spawning CLAUDE.md files across the user's filesystem",
+    "note": "These commands should be run in sequence to ensure proper context gathering before file generation"
+  },
+  "execution_order": [
+    {
+      "step": 1,
+      "command": "run-depersonalise-checker",
+      "path": "slash-commands/run-depersonalise-checker.md",
+      "purpose": "Depersonalize template CLAUDE.md files by replacing author references with user-specific or generic references",
+      "dependencies": [],
+      "outputs": [
+        "Modified CLAUDE.md templates with user-specific or generic references"
+      ]
+    },
+    {
+      "step": 2,
+      "command": "capture-distro",
+      "path": "slash-commands/capture-distro.md",
+      "purpose": "Capture the user's Linux distribution, variant, DE, and display server (X11/Wayland)",
+      "dependencies": [],
+      "outputs": [
+        "data/captured-context/distro.json"
+      ]
+    },
+    {
+      "step": 3,
+      "command": "discover-existing",
+      "path": "slash-commands/discover-existing.md",
+      "purpose": "Discover existing CLAUDE.md files outside repository bases and record them to prevent duplicate installations",
+      "dependencies": [],
+      "outputs": [
+        "data/captured-context/discovered-claudemd.json"
+      ]
+    },
+    {
+      "step": 4,
+      "command": "probe",
+      "path": "slash-commands/probe.md",
+      "purpose": "Probe the filesystem by capturing directory maps of root (/) and home (~) directories",
+      "dependencies": [],
+      "outputs": [
+        "data/captured-context/fs-probes/root-map.json",
+        "data/captured-context/fs-probes/home-map.json"
+      ]
+    },
+    {
+      "step": 5,
+      "command": "user-interview",
+      "path": "slash-commands/user-interview.md",
+      "purpose": "Interview the user to identify the purpose of paths on their filesystem",
+      "dependencies": [
+        "probe"
+      ],
+      "outputs": [
+        "data/captured-context/user-interview.json"
+      ]
+    },
+    {
+      "step": 6,
+      "command": "path-match",
+      "path": "slash-commands/path-match.md",
+      "purpose": "Match template CLAUDE.md files to corresponding paths on the user's filesystem",
+      "dependencies": [
+        "probe",
+        "user-interview"
+      ],
+      "outputs": [
+        "data/captured-context/osmap.json"
+      ]
+    },
+    {
+      "step": 7,
+      "command": "create-custom-paths",
+      "path": "slash-commands/create-custom-paths.md",
+      "purpose": "Create custom path mappings for unique user directories that don't match standard templates",
+      "dependencies": [
+        "user-interview",
+        "path-match"
+      ],
+      "outputs": [
+        "Updated data/captured-context/osmap.json with custom paths"
+      ]
+    },
+    {
+      "step": 8,
+      "command": "install-claudemd",
+      "path": "slash-commands/install-claudemd.md",
+      "purpose": "Install CLAUDE.md files to the matched paths on the user's filesystem while respecting existing files",
+      "dependencies": [
+        "run-depersonalise-checker",
+        "capture-distro",
+        "discover-existing",
+        "path-match",
+        "create-custom-paths"
+      ],
+      "outputs": [
+        "CLAUDE.md files deployed across the user's filesystem"
+      ]
+    }
+  ],
+  "notes": [
+    "The run-slashes.md command is a meta-command that executes this sequence automatically",
+    "Each command builds upon context gathered by previous commands",
+    "Users can run individual commands for maintenance/updates after initial setup",
+    "The workflow is designed to be repeatable - later runs may only update existing files"
+  ]
+}
