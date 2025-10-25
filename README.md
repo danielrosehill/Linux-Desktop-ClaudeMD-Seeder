@@ -1,5 +1,7 @@
 # Linux Desktop ClaudeMD Seeder
 
+![alt text](screenshots/image.png)
+
 A systematic utility for spawning contextual CLAUDE.md files across your Linux desktop filesystem to enhance Claude Code's understanding of your directory structure and workflows.
 
 ## Overview
