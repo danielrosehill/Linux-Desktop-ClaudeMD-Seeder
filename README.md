@@ -3,7 +3,7 @@
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-Project-8A2BE2?style=for-the-badge&logo=anthropic)
 
 [![Claude Code Projects Index](https://img.shields.io/badge/Claude%20Code-Projects%20Index-blue?style=flat-square)](https://github.com/danielrosehill/Claude-Code-Repos-Index)
-[![GitHub Master Index](https://img.shields.io/badge/GitHub-Master%20Index-green?style=flat-square)](https://github.com/danielrosehill/Github-Master-Index)
+[![GitHub Master Index](https://img.shields.io/badge/GitHub-Master%20Index-green?style=flat-square)](https://github.com/danielrosehill/Start-Here)
 
 ![alt text](screenshots/image.png)
 
